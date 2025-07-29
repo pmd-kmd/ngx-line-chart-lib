@@ -21,12 +21,17 @@ echarts.use([
   CanvasRenderer
 ]);
 
+import { LineChartComponent } from './line-chart.component';
+
 @NgModule({
   declarations: [], // <--- KEEP THIS EMPTY
   imports: [
     CommonModule,
-    NgxEchartsModule.forRoot({ echarts })
+    NgxEchartsModule.forRoot({ echarts }),
+    LineChartComponent 
   ],
-  exports: [ ]
+  exports: [ 
+    LineChartComponent 
+  ]
 })
 export class NgxLineChartsModule { }
