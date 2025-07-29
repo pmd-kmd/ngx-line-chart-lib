@@ -1,0 +1,25 @@
+<div
+  style="width: 90%; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <h1 style="text-align: center; color: #333; margin-bottom: 30px;">{{ title }}</h1>
+  <div style="margin-bottom: 40px;">
+    <h2 style="text-align: center; color: #555; margin-bottom: 15px;">Monthly Performance Overview</h2>
+    <ngx-lc-line-chart [chartTitle]="'Monthly Performance'"
+      [chartLabels]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']"
+      [chartData]="[[150, 230, 224, 218, 135, 147, 260], [200, 180, 250, 210, 160, 190, 280]]"
+      [seriesNames]="['Revenue', 'Expenses']"></ngx-lc-line-chart>
+  </div>
+  <div style="margin-bottom: 40px;">
+    <h2 style="text-align: center; color: #555; margin-bottom: 15px;">Daily User Activity Trend</h2>
+    <ngx-lc-line-chart [chartTitle]="'Daily User Activity'"
+      [chartLabels]="['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5']" [chartData]="[[50, 70, 65, 80, 75]]"
+      [seriesNames]="['Active Users']"></ngx-lc-line-chart>
+  </div>
+  <div style="margin-bottom: 40px;">
+    <h2 style="text-align: center; color: #555; margin-bottom: 15px;">Product Sales over Q1</h2>
+    <ngx-lc-line-chart [chartTitle]="'Product Sales Q1'"
+      [chartLabels]="['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']"
+      [chartData]="[[10, 15, 12, 18, 20, 25, 22, 28, 30, 35, 32, 40], [5, 8, 7, 10, 12, 15, 14, 18, 20, 22, 21, 25]]"
+      [seriesNames]="['Product A', 'Product B']"></ngx-lc-line-chart>
+  </div>
+</div>
+<!-- <router-outlet /> -->
