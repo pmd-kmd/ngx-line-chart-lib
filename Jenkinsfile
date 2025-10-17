@@ -13,10 +13,8 @@ pipeline{
                 echo "Building...."
                 sh '''
                 echo "Doing build stuff.."
-                sudo apt update
-                sudo apt upgrade
-                sudo apt install nodejs
-                sudo apt install npm
+                apk update
+                apk add --no-cache nodejs npm
                 npm install -g @angular/cli
                 cd charts
                 npm install
